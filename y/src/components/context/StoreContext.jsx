@@ -7,7 +7,7 @@ import axios from "axios"
 const StoreContextProvider =(props)=>{
     const[cartItems,setCartItems]=useState({});
     const url ="http://localhost:4000"
-    const [token,setToken] =useState("");
+    const [token,setToken] =useState();
     const[food_list,setFoodList]=useState([])
     const addToCart= async (itemId)=>{
         if(!cartItems[itemId])
@@ -26,7 +26,7 @@ const StoreContextProvider =(props)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(token)
             {
-                await axios.post(url+"/api/cart/remove",{itemId},{headers:{token}})
+                await axios.get(url+"/api/cart/remove",{itemId},{headers:{token}})
             }
     }
     // useEffect(()=>{
@@ -47,7 +47,7 @@ const StoreContextProvider =(props)=>{
 
     const fetchFoodList = async ()=>{
         const response =await axios.get(url+"/api/food/list");
-        setFoodList(response.data.data)
+        setFoodList(response.data.products)
     }
 
     const loadCartData = async (token)=>{
@@ -61,9 +61,12 @@ const StoreContextProvider =(props)=>{
         
         if(localStorage.getItem("token"))
             {
+               
+
                 setToken(localStorage.getItem("token"))
                 await loadCartData(localStorage.getItem("token"))
             }
+    
         }
            loadData();
     },[])
