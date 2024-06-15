@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 import axios from "axios"
 import { toast } from 'react-toastify'
 const Add = () => {
-    const url = "http://localhost:4000"
+    const url = "https://parth-swart.vercel.app"
     const[image,setImage]=useState(false);
     const[data,setData]=useState({
         name:"",
