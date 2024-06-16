@@ -14,7 +14,7 @@ const port = process.env.PORT||4000
 //middleware  
 app.use(express.json())
 const corsOptions ={
-    origin:'https://food-order-website-frontend.vercel.app', 
+    // origin:'https://food-order-website-frontend.vercel.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
