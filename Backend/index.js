@@ -25,6 +25,7 @@ app.use(express.json())
   allowedHeaders: [
     'Content-Type',
   ],
+Access-Control-Allow-Credentials:true,
 };
 app.use(cors(corsOpts));
 
