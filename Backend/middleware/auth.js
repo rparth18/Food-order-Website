@@ -11,7 +11,7 @@ if(!token)
        req.body.userId = token_decode.id;
        next();
     }
-    catch{
+    catch(error){
  console.log(error);
  res.json({success:false,message:"Error"})
     }
