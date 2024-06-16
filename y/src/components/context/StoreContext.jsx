@@ -49,6 +49,12 @@ const StoreContextProvider =(props)=>{
         const response =await axios.get(url+"/api/food/list");
         setFoodList(response.data.products)
     }
+    const config = {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+  }
+};
 
     const loadCartData = async (token)=>{
         const response = await axios.post(url+"/api/cart/get",{},{headers:{token}})
@@ -82,7 +88,8 @@ const StoreContextProvider =(props)=>{
            getTotalCartAmount,
            url,
            token,
-           setToken
+           setToken,
+           config
     }
     return(
         <StoreContext.Provider value={contextValue}>
