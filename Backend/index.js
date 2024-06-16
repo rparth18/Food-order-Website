@@ -14,12 +14,19 @@ const port = process.env.PORT||4000
 //middleware  
 app.use(express.json())
 
-    
+    const corsOpts = {
+  origin: '*',
 
+  methods: [
+    'GET',
+    'POST',
+  ],
 
-app.use(cors({
-    origin:*
-}));
+  allowedHeaders: [
+    'Content-Type',
+  ],
+};
+app.use(cors(corsOpts));
 
 
 
