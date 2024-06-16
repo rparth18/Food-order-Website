@@ -3,7 +3,7 @@ import './List.css'
 import axios from 'axios'
 import {toast} from "react-toastify"
 const List = () => {
-    const  url ="https://food-order-website-rho.vercel.app"
+    const  url ="https://food-order-website-one.vercel.app"
     const url1 ="blob:http://localhost:5173"
     const [list,setList]= useState([]);
     const fetchList = async ()=>{
