@@ -13,21 +13,11 @@ const port = process.env.PORT||4000
 
 //middleware  
 app.use(express.json())
-
-    const corsOpts = {
-  origin: '*',
-
-  methods: [
-    'GET',
-    'POST',
-  ],
-
-  allowedHeaders: [
-    'Content-Type',
-  ],
-Access-Control-Allow-Credentials:true,
+const corsOptions = {
+    credentials: true,
+    origin: '*'
 };
-app.use(cors(corsOpts));
+app.use(cors(corsOptions)); 
 
 
 
