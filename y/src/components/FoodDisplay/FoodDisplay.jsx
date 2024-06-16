@@ -3,7 +3,7 @@ import './FoodDisplay.css'
 import { StoreContext } from '../context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem'
 
- const  url ="https://parth-swart.vercel.app"
+ const  url ="https://food-order-website-rho.vercel.app"
 const FoodDisplay = ({category}) => {
     const {food_list} = useContext(StoreContext)
   return (
