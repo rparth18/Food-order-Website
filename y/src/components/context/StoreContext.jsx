@@ -84,7 +84,7 @@ const StoreContextProvider =(props)=>{
            url,
            token,
            setToken,
-           config
+           
     }
     return(
         <StoreContext.Provider value={contextValue}>
