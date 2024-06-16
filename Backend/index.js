@@ -14,7 +14,16 @@ const port = process.env.PORT||4000
 //middleware  
 app.use(express.json())
 // app.use(cors());
-app.use(cors({ origin: 'https://food-order-website-ganq.vercel.app' }));
+app.use(cors({ origin: }));
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://food-order-website-ganq.vercel.app"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
 
 // db connection 
