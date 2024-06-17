@@ -1,5 +1,5 @@
 {
-   "routes":  [
+   "rewrites":  [
     {"source": "/cart", "destination": "/"},
      {"source": "/myorders", "destination": "/"},
      {"source": "/verify", "destination": "/"}
