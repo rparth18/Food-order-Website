@@ -3,5 +3,6 @@
   "rewrites":  [
     {"source": "/myorders", "destination": "/"},
      {"source": "/verify", "destination": "/"},
+       {"source": "/cart", "destination": "/"},
   ]
 }
