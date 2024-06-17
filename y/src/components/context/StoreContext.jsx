@@ -6,7 +6,7 @@ import axios from "axios"
 
 const StoreContextProvider =(props)=>{
     const[cartItems,setCartItems]=useState({});
-    const url ="https://food-order-website-7ql4.vercel.app"
+    const url ="https://food-order-website-kappa.vercel.app"
     const [token,setToken] =useState();
     const[food_list,setFoodList]=useState([])
     const addToCart= async (itemId)=>{
