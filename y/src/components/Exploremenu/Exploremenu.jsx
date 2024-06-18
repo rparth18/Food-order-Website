@@ -1,7 +1,7 @@
 import React from 'react'
 import './Exploremenu.css'
 import {menu_list} from '../../assets/assets'
-import {FoodDisplay} from '../FoodDisplay/FoodDisplay'
+
 const Exploremenu = ({category,setCategory}) => {
   return (
     <div className='explore-menu' id='exlpore-menu'>
@@ -14,7 +14,7 @@ const Exploremenu = ({category,setCategory}) => {
                     <div  onClick={()=>setCategory(prev=>prev===item.menu_name?"ALL":item.menu_name)}key={index} className='explore-menu-list-item'>
                     <img className={category===item.menu_image.name?"active":""}src={item.menu_image} alt=""/>
                     <p>{item.menu_name}</p>
-                    <FoodDisplay category={category}/>
+                   
                     </div>
 
                 )
