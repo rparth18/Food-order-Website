@@ -6,7 +6,7 @@ import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 import AppDownload from '../../components/AppDownload/AppDownload'
 import Cart from '../Cart/Cart' 
 const Home = () => {
-   const[category,setCategory]=useState("ALL");
+   const[category,setCategory]=useState("");
   return (
     <div>
       <Header/>
