@@ -6,7 +6,7 @@ import FoodItem from '../FoodItem/FoodItem'
  const  url ="https://food-order-website-kappa.vercel.app"
 const FoodDisplay = ({category}) => {
     const {food_list} = useContext(StoreContext)
-  return (
+  return ( 
     
       <div className='food-display' id='food-display'>
       <h2>Top dishes near you</h2>
