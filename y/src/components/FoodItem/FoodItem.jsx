@@ -6,11 +6,20 @@ import { StoreContext } from '../context/StoreContext';
 const FoodItem = ({id,name,price,description}) => {
     // const[itemCount,setItemCount]=useState(0);
     const {cartItems,addToCart,removeFromCart,url}=useContext(StoreContext);
-       const res =  axios.get(`${url}/api/food/foodphoto/${id}`)
+       // const res =  axios.get(`${url}/api/food/foodphoto/${id}`)
+      const fetchTodos = async (id) => {
+      try {
+        const response = await axios.get(`${url}/api/food/foodphoto/${id}`);
+        console.log(response);
+        return response;
+      } catch (error) {
+        console.log(error);
+      }
+    };
   return (
     <div className='food-item'>
     <div className='food-item-img-container'>
-        <img className='food-item-image' src={res} alt=""/>
+        <img className='food-item-image' src={fetchTodos(`${id}`)} alt=""/>
         {
             !cartItems[id] ? <img className='add' onClick={()=>addToCart(id)}src={assets.add_icon_white} alt=""/>
             : <div className='food-item-counter'>
