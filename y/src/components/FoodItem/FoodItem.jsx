@@ -12,7 +12,7 @@ const FoodItem = ({id,name,price,description}) => {
       try { 
         const response = await axios.get(`${url}/api/food/foodphoto/${id}`);
         console.log(response);
-        return response;
+        
       } catch (error) {
         console.log(error);
       }
