@@ -3,7 +3,7 @@ import './FoodItem.css'
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../context/StoreContext';
 // import { useState } from 'react'
-const FoodItem = ({id,name,price,description}) => {
+const FoodItem = ({id,name,price,description}) => { 
     // const[itemCount,setItemCount]=useState(0);
     const {cartItems,addToCart,removeFromCart,url}=useContext(StoreContext);
        // const res =  axios.get(`${url}/api/food/foodphoto/${id}`)
