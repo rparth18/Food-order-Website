@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import './FoodItem.css'
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../context/StoreContext';
+import axios from 'axios'
 // import { useState } from 'react'
 const FoodItem = ({id,name,price,description}) => { 
     // const[itemCount,setItemCount]=useState(0);
