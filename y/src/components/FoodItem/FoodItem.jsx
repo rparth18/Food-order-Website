@@ -8,7 +8,7 @@ const FoodItem = ({id,name,price,description}) => {
     const {cartItems,addToCart,removeFromCart,url}=useContext(StoreContext);
        // const res =  axios.get(`${url}/api/food/foodphoto/${id}`)
       const fetchTodos = async (id) => {
-      try {
+      try { 
         const response = await axios.get(`${url}/api/food/foodphoto/${id}`);
         console.log(response);
         return response;
