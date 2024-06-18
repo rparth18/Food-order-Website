@@ -6,7 +6,7 @@ import {assets} from "../../assets/assets"
 
 
 const Orders = () => {
-  const  url ="https://food-order-website-one.vercel.app"
+  const  url ="https://food-order-website-kappa.vercel.app"
   const [orders,setOrders] = useState([]);
   const fetchAllOrders = async ()=>{
     const response = await axios.get(url+"/api/order/list")
