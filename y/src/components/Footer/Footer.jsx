@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 import { assets } from '../../assets/assets'
 const Footer = () => {
   return (
@@ -24,7 +25,10 @@ const Footer = () => {
         <div className='footer-content-center'>
         <h2>COMPANY</h2>
         <ul>
-        <li>Home</li>
+          <Link to='/'>
+             <li>Home</li>
+          </Link>
+       
         <li>About us</li>
         <li>Delivery</li>
         <li>Privacy policy</li>
