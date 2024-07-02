@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import { Link } from 'react-router-dom'
+
 import { assets } from '../../assets/assets'
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='footer-content'>
         <div className='footer-content-left'>
         <img src={assets.logo} alt=""/>
-        <p>© 2020 All rights reserved</p>
+        <p>© 2024 All rights reserved</p>
         <div className='footer-social-icons'>
           <a href='https://www.facebook.com'>
             <img src={assets.facebook_icon} alt=""/>
@@ -25,9 +25,11 @@ const Footer = () => {
         <div className='footer-content-center'>
         <h2>COMPANY</h2>
         <ul>
-          <Link to='/'>
+          <a href='#header'>
              <li>Home</li>
-          </Link>
+            
+          </a>
+          
        
         <li>About us</li>
         <li>Delivery</li>
