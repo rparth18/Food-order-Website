@@ -9,9 +9,16 @@ const Footer = () => {
         <img src={assets.logo} alt=""/>
         <p>© 2020 All rights reserved</p>
         <div className='footer-social-icons'>
+          <a href='https://www.facebook.com'>
             <img src={assets.facebook_icon} alt=""/>
-            <img src={assets.twitter_icon} alt=""/>
-            <img src={assets.linkedin_icon} alt=""/>
+          </a>
+            <a href='https://x.com/?lang=en'>
+               <img src={assets.twitter_icon} alt=""/>
+            </a>
+           <a href='https://www.linkedin.com'>
+               <img src={assets.linkedin_icon} alt=""/>
+           </a>
+          
         </div>
         </div>
         <div className='footer-content-center'>
