@@ -92,13 +92,13 @@ useEffect(()=>{
           <div>
            <div className='cart-total-details'>
             <p>Subtotal</p>
-            <p>${getTotalCartAmount()}</p>
+            <p>{getTotalCartAmount()}</p>
            </div>
            <hr/>
            <div className='cart-total-details'>
             <p>Delivery Fee</p>
             <p>{
-              getTotalCartAmount()>0?<b>${2}</b>:<b>${0}</b>
+              getTotalCartAmount()>0?<b>{2}</b>:<b>{0}</b>
               }</p>
            </div>
            <hr/>
@@ -106,7 +106,7 @@ useEffect(()=>{
             <b>Total</b>
 
             {
-              getTotalCartAmount()>0?<b>${getTotalCartAmount()+2}</b>:<b>${0}</b>
+              getTotalCartAmount()>0?<b>{getTotalCartAmount()+2}</b>:<b>{0}</b>
               }
             
 
